@@ -44,10 +44,20 @@ namespace ConsoleApp1
         {
             
             Console.SetCursorPosition(
-                 r.Next(Console.WindowWidth) , r.Next(Console.WindowHeight)
-                );
+                 r.Next(Console.WindowWidth) , r.Next(Console.WindowHeight) );
             Console.Write("*");
         }
-
+        static void RandomSzin()
+        {
+            ConsoleColor[] szinek =
+                {
+                ConsoleColor.Green,
+            ConsoleColor.Magenta,
+                ConsoleColor.Blue,
+                ConsoleColor.Red,
+                ConsoleColor.Yellow,
+            };
+            Console.ForegroundColor = szinek[r.Next(szinek.Length)];
+        }
     }
 }
